@@ -10,9 +10,10 @@ type
   private
 
   public
-    Nome : String;
-    SobreNome : String;
-    Cpf : String;
+    Id: Integer;
+    Nome: String;
+    Tipo: String;
+    Email: String;
   end;
 
 implementation

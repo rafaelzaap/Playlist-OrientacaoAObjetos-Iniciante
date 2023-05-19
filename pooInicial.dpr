@@ -1,8 +1,8 @@
-program Project1;
+program pooInicial;
 
 uses
   Vcl.Forms,
-  Unit1 in 'Unit1.pas' {Form1},
+  viewPrincipal in 'viewPrincipal.pas' {Form1},
   Pessoa in 'Pessoa.pas';
 
 {$R *.res}

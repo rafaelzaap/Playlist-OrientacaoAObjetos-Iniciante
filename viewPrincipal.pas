@@ -1,4 +1,4 @@
-unit Unit1;
+unit viewPrincipal;
 
 interface
 
@@ -28,13 +28,17 @@ var
   Pessoa: TPessoa;
 begin
   Pessoa := TPessoa.Create;
-  try
-    Pessoa.Nome := 'Rafael';
-    Pessoa.SobreNome := 'Silva';
-    Pessoa.Cpf := '060.651.677-89';
 
-    ShowMessage('Nome: ' + pessoa.SobreNome + ' ' + Pessoa.Nome + #13 +
-                'CPF: ' + pessoa.Cpf);
+  try
+    // abaixo é setado as informações no objeto. [SET]
+    Pessoa.Id := 1;
+    Pessoa.Nome := 'Rafael';
+    Pessoa.Tipo := 'F';
+    Pessoa.Email := 'rafael.zaap@gmail.com';
+
+    //abaixo é buscado as informações no objeto. [GET]
+    ShowMessage(Pessoa.Id.ToString + ' - ' +Pessoa.Nome + #13 +
+                Pessoa.Tipo + ' - ' + Pessoa.Email);
   finally
     FreeAndNil(Pessoa);
   end;
