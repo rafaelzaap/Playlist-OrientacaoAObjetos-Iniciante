@@ -28,7 +28,6 @@ var
   Pessoa: TPessoa;
 begin
   Pessoa := TPessoa.Create;
-
   try
     // abaixo é setado as informações no objeto. [SET]
     Pessoa.Id := 1;
@@ -40,7 +39,7 @@ begin
     ShowMessage(Pessoa.Id.ToString + ' - ' +Pessoa.Nome + #13 +
                 Pessoa.Tipo + ' - ' + Pessoa.Email);
   finally
-    FreeAndNil(Pessoa);
+    Pessoa.Free;
   end;
 
 end;
